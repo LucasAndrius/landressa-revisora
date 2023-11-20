@@ -1,13 +1,15 @@
+import { About } from "@/components/About";
 import { Navbar } from "@/components/Navbar";
-import Image from "next/image";
+import { Quot } from "@/components/Quot";
 
 export default function Home() {
   return (
     <div className="bg-myWhite container flex flex-col py-10 px-24 rounded-3xl min-h-screen">
+      <Navbar />
       <main>
-        <Navbar />
-        <div>...</div>
+        <About />
       </main>
+      <Quot />
     </div>
   );
 }
