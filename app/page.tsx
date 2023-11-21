@@ -1,14 +1,20 @@
-import { About } from "@/components/About";
+import { WhatIDo } from "@/components/WhatIDo";
 import { Navbar } from "@/components/Navbar";
 import { Quot } from "@/components/Quot";
+import { Wave } from "@/components/svg";
+import { About } from "@/components/About";
 
 export default function Home() {
   return (
-    <div className="bg-myWhite container flex flex-col py-10 px-24 rounded-3xl min-h-screen">
-      <Navbar />
-      <main>
-        <About />
-      </main>
+    <div>
+      <div className="bg-myPink">
+        <Navbar />
+        <main>
+          <WhatIDo />
+        </main>
+      </div>
+      <Wave className="w-full h-[250px] text-myPink -z-10" />
+      <About />
       <Quot />
     </div>
   );

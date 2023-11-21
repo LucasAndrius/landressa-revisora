@@ -1,39 +1,45 @@
 import { navigationLinks } from "@/utils/data";
-import { Caveat } from "next/font/google";
 import Link from "next/link";
 import { Instagram, Whatsapp } from "./svg";
-
-const caveat = Caveat({ subsets: ["latin"] });
+import Session from "./Container";
+import { Cinzel_Decorative } from "next/font/google";
+const cinzelDecorative = Cinzel_Decorative({
+  subsets: ["latin"],
+  weight: ["400", "700", "900"],
+});
 
 export const Navbar = () => {
   return (
-    <div className="mb-14">
-      <div className="lg:h-40 max-w-5xl lg:flex lg:justify-between items-center">
-        <h1 className={`text-6xl font-bold ${caveat.className}`}>
-          Landressa <br />
-          Schiefelbein
+    <Session>
+      <div className="lg:flex lg:justify-between lg:items-center md:text-center !md:w-screen py-16">
+        <h1 className={`flex flex-col ${cinzelDecorative.className}`}>
+          <span className="text-4xl">Landressa</span>
+          <span className="text-2xl lg:text-end">Schiefelbein</span>
         </h1>
-        <ul className="lg:flex font-semibold">
-          {navigationLinks.map((link, index) => (
-            <li key={index} className="py-2 px-4">
-              <Link href={link.path[0]} className="hover:text-myPink">
+        <div>
+          <nav className="flex gap-6 justify-center">
+            {navigationLinks.map((link, index) => (
+              <Link href={link.path[0]} key={index}>
                 {link.label}
               </Link>
-            </li>
-          ))}
-        </ul>
-        <div className="lg:flex gap-4">
+            ))}
+          </nav>
+        </div>
+        <div className="flex gap-3 items-center">
           <Link
             href="https://whatsa.me/5555997073688/?t=Ol%C3%A1,%20gostaria%20de%20realizar%20um%20or%C3%A7amento."
             target="_blank"
           >
-            <Whatsapp className="text-lg hover:text-myPink" />
+            <Whatsapp />
           </Link>
           <Link href="https://www.instagram.com/landressasch/" target="_blank">
-            <Instagram className="text-lg hover:text-myPink" />
+            <Instagram />
+          </Link>
+          <Link href="http://lattes.cnpq.br/7252092118340697" target="_blank">
+            Lattes
           </Link>
         </div>
       </div>
-    </div>
+    </Session>
   );
 };

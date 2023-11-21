@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { Quicksand } from "next/font/google";
+import { Noto_Sans } from "next/font/google";
 import "./globals.css";
 
-const quicksand = Quicksand({ subsets: ["latin"] });
+const noto = Noto_Sans({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
 
 export const metadata: Metadata = {
   title: "Landressa Schiefelbein",
@@ -15,12 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body
-        className={`${quicksand.className} my-14 px-24 container mx-auto bg-myBlue`}
-      >
-        {children}
-      </body>
+    <html lang="pt-br" className={`scroll-smooth ${noto.className}`}>
+      <body>{children}</body>
     </html>
   );
 }

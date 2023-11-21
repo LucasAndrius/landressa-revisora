@@ -14,14 +14,13 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
+        myPink: "#FFDFDF",
+        myWhite: "#F4F6FC",
         myBlue: "#AEDEFC",
-        myWhite: "#FFF5F9",
         myBlack: "#111111",
-        myLightPink: "#FFDFDF",
-        myPink: "#F875AA",
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
 export default config;

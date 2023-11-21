@@ -1,32 +1,37 @@
-import Image from "next/image";
-import landressaImg from "@/public/Landressa Rita Schiefelbein.jpg";
+import { ButtonLink } from "./ButtonLink";
+import Container from "./Container";
+import { BookUndraw } from "./svg";
+import { Yeseva_One } from "next/font/google";
+
+const yeseva = Yeseva_One({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 export const About = () => {
   return (
-    <div className="lg:grid lg:grid-cols-[60%_40%] lg:gap-20 lg:my-14">
-      <div>
-        <h2 className="lg:text-4xl font-semibold">What is Lorem Ipsum?</h2>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industrys standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
-        </p>
+    <Container>
+      <div className="lg:flex lg:items-center mt-[-150px]">
+        <div className="w-1/2">
+          <BookUndraw className="w-[350px] h-auto text-myBlue" />
+        </div>
+        <div className="w-1/2 lg:flex lg:flex-col gap-2">
+          <h2 className={`font-semibold text-3xl mb-4 ${yeseva.className}`}>
+            Sobre mim
+          </h2>
+          <p>
+            Olá, me chamo Landressa! Sou formada em Filosofia (UFPel) <br />e
+            curso Letras - Revisão e Redação de Texto (UFPel).
+          </p>
+          <p>
+            Trabalho com revisão de textos acadêmicos há três anos. Como parte
+            do trabalho, faço adequação de textos à linguagem acadêmica,
+            ortografia, gramática, corerência e coesão, bem como formatação
+            ABNT.
+          </p>
+          <ButtonLink link="/portfolio" label="saiba mais..." />
+        </div>
       </div>
-      <div>
-        <Image
-          src={landressaImg}
-          alt="foto de Landressa"
-          height={280}
-          width={280}
-          className="rounded-ss-[100px] rounded-se-[50px] rounded-e-[100px] rounded-bl-[20px]"
-        />
-      </div>
-    </div>
+    </Container>
   );
 };
