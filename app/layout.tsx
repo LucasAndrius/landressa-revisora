@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-br"
-      className={`scroll-smooth ${noto.className} max-w-[1440px]`}
+      className={`scroll-smooth container  ${noto.className} max-w-[1440px] mx-auto`}
     >
       <body>{children}</body>
     </html>
