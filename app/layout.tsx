@@ -18,7 +18,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-br" className={`scroll-smooth ${noto.className}`}>
+    <html
+      lang="pt-br"
+      className={`scroll-smooth ${noto.className} max-w-[1440px]`}
+    >
       <body>{children}</body>
     </html>
   );
