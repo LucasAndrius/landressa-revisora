@@ -20,7 +20,9 @@ export const Quot = () => {
         <div className="lg:flex">
           <div className="w-1/2 h-auto flex justify-center">
             <div className=" bg-myPink w-80 p-5 rounded-3xl border-r-8 border-t-8 border-myBlue">
-              <h3 className="text-center font-semibold text-xl">
+              <h3
+                className={`text-center font-semibold text-xl ${yeseva.className}`}
+              >
                 Plano 1 <br />
                 Formata pra mim
               </h3>
@@ -43,7 +45,9 @@ export const Quot = () => {
           </div>
           <div className="w-1/2 flex justify-center">
             <div className=" bg-myPink w-80 p-5 rounded-3xl border-r-8 border-t-8 border-myBlue">
-              <h3 className="text-center font-semibold text-xl">
+              <h3
+                className={`text-center font-semibold text-xl ${yeseva.className}`}
+              >
                 Plano 2 <br />
                 Revisão + Formata pra mim
               </h3>
@@ -57,7 +61,9 @@ export const Quot = () => {
                 <li className="pt-2">Repetição vocabular</li>
                 <li className="pt-2">Erros de digitação</li>
               </ul>
-              <p> + Plano 1 Formata pra mim</p>
+              <p className={yeseva.className}>
+                <span className="font-bold">+</span> Plano 1 Formata pra mim
+              </p>
               <ButtonLink link="" label="quero este" />
             </div>
           </div>
