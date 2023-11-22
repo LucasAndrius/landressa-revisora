@@ -11,11 +11,11 @@ const yeseva = Yeseva_One({
 export const About = () => {
   return (
     <Container>
-      <div className="lg:flex lg:items-center mt-[-260px] py-[50px]">
-        <div className="w-1/2">
+      <div className="lg:flex lg:flex-row lg:items-center  md:flex-col lg:mt-[-260px] md:mt-[-320px] py-[50px]">
+        <div className="lg:w-1/2 lg:justify-start md:w-full md:flex md:justify-center">
           <BookUndraw className="w-[350px] h-auto text-myBlue" />
         </div>
-        <div className="w-1/2 lg:flex lg:flex-col gap-2">
+        <div className="lg:w-1/2 lg:flex lg:flex-col md:w-full gap-2">
           <h2 className={`font-semibold text-3xl mb-4 ${yeseva.className}`}>
             Sobre mim
           </h2>

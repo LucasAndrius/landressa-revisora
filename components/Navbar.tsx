@@ -1,9 +1,9 @@
 import { navigationLinks } from "@/utils/data";
 import Link from "next/link";
 import { Instagram, Whatsapp } from "./svg";
-import Session from "./Container";
 import { Cinzel_Decorative } from "next/font/google";
 import { Yeseva_One } from "next/font/google";
+import Container from "./Container";
 
 const cinzelDecorative = Cinzel_Decorative({
   subsets: ["latin"],
@@ -17,7 +17,7 @@ const yeseva = Yeseva_One({
 
 export const Navbar = () => {
   return (
-    <Session>
+    <Container>
       <div className="lg:flex lg:justify-between lg:items-center md:text-center !md:w-screen pt-[60px] pb-[40px]">
         <h2 className={` ${cinzelDecorative.className}`}>
           <Link href="/" className="flex flex-col">
@@ -25,7 +25,7 @@ export const Navbar = () => {
             <span className="text-2xl lg:text-end">Schiefelbein</span>
           </Link>
         </h2>
-        <div>
+        <div className="md:my-8 sm:my-8">
           <nav className={`flex gap-6 justify-center ${yeseva.className}`}>
             {navigationLinks.map((link, index) => (
               <Link
@@ -38,7 +38,7 @@ export const Navbar = () => {
             ))}
           </nav>
         </div>
-        <div className="flex gap-3 items-center">
+        <div className="flex gap-3 items-center md:justify-center">
           <Link
             href="https://whatsa.me/5555997073688/?t=Ol%C3%A1,%20gostaria%20de%20realizar%20um%20or%C3%A7amento."
             target="_blank"
@@ -57,6 +57,6 @@ export const Navbar = () => {
           </Link>
         </div>
       </div>
-    </Session>
+    </Container>
   );
 };

@@ -10,32 +10,30 @@ const yeseva = Yeseva_One({
 
 export const WhatIDo = () => {
   return (
-    <div className="py-[50px]">
-      <Container>
-        <div className="lg:flex gap-10">
-          <div className="w-1/2">
+    <Container>
+      <div className="py-[50px]">
+        <div className="lg:flex gap-10 ">
+          <div className="lg:w-1/2 lg:text-left md:w-full md:text-center">
             <h1 className={`font-semibold text-3xl mb-4 ${yeseva.className}`}>
               Olá, eu sou a Landressa!
               <br />
               Revisora de textos
             </h1>
-            <p>
+            <p className="lg:px-0 md:px-32">
               Ajudo você na formatação e revisão completa do seu TCC,
               Dissertação e Tese. Também trabalho com artigos acadêmicos para
               revistas e coletâneas.
             </p>
           </div>
-          <div className="lg:flex justify-center w-1/2">
+          <div className="flex justify-center lg:w-1/2 sm:w-full lg:my-0 md:my-8">
             <Image
               src={landressaImg}
               alt="foto de Landressa"
-              height={300}
-              width={300}
-              className="lg:rounded-ss-[40%] lg:rounded-se-[20%] lg:rounded-ee-[40%] lg:rounded-es-[7%] rounded-3xl"
+              className="rounded-ss-[40%] rounded-se-[20%] rounded-ee-[40%] rounded-es-[7%] rounded-3xl lg:h-[300px] lg:w-[300px] md:h-60 md:w-60"
             />
           </div>
         </div>
-      </Container>
-    </div>
+      </div>
+    </Container>
   );
 };
