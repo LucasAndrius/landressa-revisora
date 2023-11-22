@@ -10,15 +10,15 @@ const yeseva = Yeseva_One({
 
 export const WhatIDo = () => {
   return (
-    <div className="">
+    <div className="py-[50px]">
       <Container>
-        <div className="lg:flex gap-10 pt-8">
+        <div className="lg:flex gap-10">
           <div className="w-1/2">
-            <h2 className={`font-semibold text-3xl mb-4 ${yeseva.className}`}>
+            <h1 className={`font-semibold text-3xl mb-4 ${yeseva.className}`}>
               Olá, eu sou a Landressa!
               <br />
               Revisora de textos
-            </h2>
+            </h1>
             <p>
               Ajudo você na formatação e revisão completa do seu TCC,
               Dissertação e Tese. Também trabalho com artigos acadêmicos para

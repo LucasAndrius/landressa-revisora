@@ -11,7 +11,7 @@ const yeseva = Yeseva_One({
 export const About = () => {
   return (
     <Container>
-      <div className="lg:flex lg:items-center mt-[-150px]">
+      <div className="lg:flex lg:items-center mt-[-260px] py-[50px]">
         <div className="w-1/2">
           <BookUndraw className="w-[350px] h-auto text-myBlue" />
         </div>

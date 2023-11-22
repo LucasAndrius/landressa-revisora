@@ -18,6 +18,8 @@ const config: Config = {
         myWhite: "#F4F6FC",
         myBlue: "#AEDEFC",
         myBlack: "#111111",
+        myPinkHover: "#F875AA",
+        myBlueHover: "#0174BE",
       },
     },
   },

@@ -10,11 +10,8 @@ const yeseva = Yeseva_One({
 export const Quot = () => {
   return (
     <Container>
-      <div className="my-16">
-        <h2
-          id="quot"
-          className={`font-semibold text-3xl mb-10 ${yeseva.className}`}
-        >
+      <div className="py-[50px]" id="quot">
+        <h2 className={`font-semibold text-3xl mb-12 ${yeseva.className}`}>
           Vamos trabalhar juntos!
         </h2>
         <div className="lg:flex">

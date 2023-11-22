@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Sans } from "next/font/google";
 import "./globals.css";
+import { ScrollTop } from "@/components/ScrollToTop";
 
 const noto = Noto_Sans({
   subsets: ["latin"],
@@ -20,9 +21,12 @@ export default function RootLayout({
   return (
     <html
       lang="pt-br"
-      className={`scroll-smooth container  ${noto.className} max-w-[1440px] mx-auto`}
+      className={`scroll-smooth container  ${noto.className} max-w-[1440px] mx-auto !bg-myWhite`}
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        <ScrollTop />
+      </body>
     </html>
   );
 }
