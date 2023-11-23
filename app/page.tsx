@@ -1,10 +1,11 @@
 import { WhatIDo } from "@/components/WhatIDo";
-import { Navbar } from "@/components/Navbar";
+
 import { Quot } from "@/components/Quot";
 import { Wave } from "@/components/svg";
 import { About } from "@/components/About";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
+import { Navbar } from "@/components/Navbar";
 
 export default function Home() {
   return (

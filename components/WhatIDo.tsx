@@ -19,17 +19,17 @@ export const WhatIDo = () => {
               <br />
               Revisora de textos
             </h1>
-            <p className="lg:px-0 md:px-32">
+            <p className="!sm:pb-8 lg:px-0 md:px-32 ">
               Ajudo você na formatação e revisão completa do seu TCC,
               Dissertação e Tese. Também trabalho com artigos acadêmicos para
               revistas e coletâneas.
             </p>
           </div>
-          <div className="flex justify-center lg:w-1/2 sm:w-full lg:my-0 md:my-8">
+          <div className="flex justify-center lg:w-1/2 sm:w-full !sm:my-8 lg:my-0 md:my-8 ">
             <Image
               src={landressaImg}
               alt="foto de Landressa"
-              className="rounded-ss-[40%] rounded-se-[20%] rounded-ee-[40%] rounded-es-[7%] rounded-3xl lg:h-[300px] lg:w-[300px] md:h-60 md:w-60"
+              className="rounded-ss-[40%] rounded-se-[20%] rounded-ee-[40%] rounded-es-[7%] rounded-3xl !md:h-60 !md:w-60 !lg:h-[300px] !lg:w-[300px]"
             />
           </div>
         </div>

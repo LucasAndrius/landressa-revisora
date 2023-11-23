@@ -19,7 +19,7 @@ export const Contact = () => {
   return (
     <Container>
       <div className="lg:flex lg:justify-between md:flex md:justify-between !sm:flex-col  py-[50px]">
-        <div>
+        <div id="contact">
           <h2 className={`font-semibold text-3xl mb-10 ${yeseva.className}`}>
             Entre em contato
           </h2>
