@@ -13,13 +13,20 @@ export const WhatIDo = () => {
     <Container>
       <div className="py-[50px]">
         <div className="lg:flex gap-10 ">
-          <div className="lg:w-1/2 lg:text-left md:w-full md:text-center">
+          <div className="flex flex-col mt-[-15px]  md:items-start md:px-32 lg:px-0 md:w-full md:text-cente lg:w-1/2 lg:text-left r">
+            <div className="w-full flex justify-center">
+              <Image
+                src={landressaImg}
+                alt="foto de Landressa"
+                className="w-36 h-36 lg:hidden rounded-full mb-10"
+              />
+            </div>
             <h1 className={`font-semibold text-3xl mb-4 ${yeseva.className}`}>
               Olá, eu sou a Landressa!
               <br />
               Revisora de textos
             </h1>
-            <p className="!sm:pb-8 lg:px-0 md:px-32 ">
+            <p className="!sm:pb-8 lg:px-0  ">
               Ajudo você na formatação e revisão completa do seu TCC,
               Dissertação e Tese. Também trabalho com artigos acadêmicos para
               revistas e coletâneas.
@@ -29,7 +36,7 @@ export const WhatIDo = () => {
             <Image
               src={landressaImg}
               alt="foto de Landressa"
-              className="rounded-ss-[40%] rounded-se-[20%] rounded-ee-[40%] rounded-es-[7%] rounded-3xl !md:h-60 !md:w-60 !lg:h-[300px] !lg:w-[300px]"
+              className="hidden  md:h-60 md:w-60 lg:block lg:h-[300px] lg:w-[300px] rounded-ss-[40%] rounded-se-[20%] rounded-ee-[40%] rounded-es-[7%] rounded-3xl"
             />
           </div>
         </div>

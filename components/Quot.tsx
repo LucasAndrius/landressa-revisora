@@ -10,12 +10,12 @@ const yeseva = Yeseva_One({
 export const Quot = () => {
   return (
     <Container>
-      <div className="py-[50px]" id="quot">
+      <div className="md:px-32 lg:px-0 py-[50px]" id="quot">
         <h2 className={`font-semibold text-3xl mb-12 ${yeseva.className}`}>
           Vamos trabalhar juntos!
         </h2>
         <div className="lg:flex">
-          <div className="lg:w-1/2 h-auto flex justify-center md:w-full md:mb-10">
+          <div className="mb-10 md:w-full lg:w-1/2 h-auto flex justify-center ">
             <div className=" bg-myPink w-80 p-5 rounded-3xl border-r-8 border-t-8 border-myBlue">
               <h3
                 className={`text-center font-semibold text-xl ${yeseva.className}`}

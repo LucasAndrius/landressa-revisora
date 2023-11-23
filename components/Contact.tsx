@@ -8,7 +8,6 @@ const cinzelDecorative = Cinzel_Decorative({
 
 import { Yeseva_One } from "next/font/google";
 import { Instagram, Whatsapp } from "./svg";
-import Link from "next/link";
 
 const yeseva = Yeseva_One({
   subsets: ["latin"],
@@ -18,43 +17,31 @@ const yeseva = Yeseva_One({
 export const Contact = () => {
   return (
     <Container>
-      <div className="lg:flex lg:justify-between md:flex md:justify-between !sm:flex-col  py-[50px]">
-        <div id="contact">
-          <h2 className={`font-semibold text-3xl mb-10 ${yeseva.className}`}>
+      <div className=" md:mx-32 lg:mx-0 lg:flex lg:justify-between py-[50px]">
+        <div>
+          <h2
+            id="contact"
+            className={`font-semibold text-3xl mb-10 ${yeseva.className}`}
+          >
             Entre em contato
           </h2>
-          <div className="flex items-center gap-2 text-xl py-2">
-            <Link
-              href="https://whatsa.me/5555997073688/?t=Ol%C3%A1,%20gostaria%20de%20realizar%20um%20or%C3%A7amento."
-              target="_blank"
-            >
-              <Whatsapp className="hover:text-myPinkHover" />
-            </Link>
-            (55) 997073688
+          <div className="text-sm flex items-center gap-2 md:text-xl py-2">
+            <Whatsapp className="" /> (55) 997073688
           </div>
-          <div className="flex items-center gap-2 text-xl py-2">
-            <Link
-              href="https://www.instagram.com/landressasch/"
-              target="_blank"
-            >
-              <Instagram className="hover:text-myPinkHover" />
-            </Link>
-            @landressasch
+          <div className="text-sm flex items-center gap-2 md:text-xl py-2">
+            <Instagram /> @landressasch
           </div>
-          <div className="flex items-center gap-2 text-xl py-2">
-            <span className="hover:text-myPinkHover">@</span>
-            contato_landressa@gmail.com
+          <div className="text-sm flex items-center gap-2 md:text-xl py-2">
+            <span>@</span> contato_landressa@gmail.com
           </div>
         </div>
-        <div>
-          <h2 className={`${cinzelDecorative.className}`}>
-            <Link href="/" className="flex flex-col">
-              <span className="text-4xl text-end">Landressa</span>
-              <span className="text-2xl text-end">Schiefelbein</span>
-            </Link>
+        <div className="flex flex-col items-start">
+          <h2 className={`mt-5 flex flex-col ${cinzelDecorative.className}`}>
+            <span className="text-4xl text-end">Landressa</span>
+            <span className="text-2xl text-end">Schiefelbein</span>
           </h2>
-          <p className="text-end">revisora de texto</p>
-          <p className="w-[200px] text-sm py-5">
+          <p className="w-[200px] text-right">revisora de texto</p>
+          <p className="w-[250px] lg:w-[200px] text-sm py-5">
             Ajudo você na formatação e revisão completa do seu TCC, Dissertação
             e Tese. Também trabalho com artigos acadêmicos para revistas e
             coletâneas.

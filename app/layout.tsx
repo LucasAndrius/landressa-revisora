@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-br"
-      className={`scroll-smooth container  ${noto.className} max-w-[1440px] mx-auto !sm:w-full !sm:mx-0 !bg-myWhite text-myBlack`}
+      className={`!scroll-smooth container  ${noto.className} max-w-[1440px] mx-auto !sm:w-full !sm:mx-0 !bg-myWhite text-myBlack`}
     >
       <body>
         {children}

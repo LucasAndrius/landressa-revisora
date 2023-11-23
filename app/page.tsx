@@ -15,7 +15,7 @@ export default function Home() {
           <Navbar />
           <WhatIDo />
         </div>
-        <Wave className="w-full h-[250px] text-myPink -z-10" />
+        <Wave className="w-full h-[250px] md:h-[250px] text-myPink -z-10" />
         <About />
         <Quot />
         <Contact />
