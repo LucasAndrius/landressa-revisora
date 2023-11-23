@@ -70,7 +70,7 @@ export const Navbar = () => {
           </div>
           <div
             onClick={handleNav}
-            className="absolute top-16 right-10 sm:hidden "
+            className="absolute top-16 right-10 text-2xl  sm:hidden "
           >
             {menuOpen ? <></> : <Menu />}
           </div>
@@ -78,13 +78,13 @@ export const Navbar = () => {
         <div
           className={
             menuOpen
-              ? "fixed left-0 top-0 w-[70%] sm:hidden h-screen bg-myBlack/90 p-10 ease-in duration-300"
+              ? "fixed left-0 top-0 w-[70%] sm:hidden h-screen bg-myBlack/90 p-10 ease-in duration-300 "
               : "fixed left-[-100%] top-0 p-10 !ease-in-out duration-1000"
           }
         >
           <div onClick={handleNav} className="pt-6 sm:hidden text-myWhite">
             {menuOpen ? (
-              <Close className="absolute top-16 right-10 sm:hidden " />
+              <Close className="absolute top-16 right-10 sm:hidden text-2xl" />
             ) : (
               <></>
             )}
