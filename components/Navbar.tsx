@@ -18,76 +18,111 @@ const yeseva = Yeseva_One({
 });
 
 export const Navbar = () => {
-  const [navbar, setNavbar] = useState(false);
-
+  const [menuOpen, setMenuOpen] = useState(false);
+  const handleNav = () => {
+    setMenuOpen(!menuOpen);
+  };
   return (
     <Container>
-      <div className="lg:flex lg:justify-between lg:items-center md:text-center !md:w-screen pt-[60px] pb-[40px]">
-        <h2 className={` ${cinzelDecorative.className}`}>
-          <Link href="/" className="flex flex-col">
-            <span className="text-4xl">Landressa</span>
-            <span className="text-2xl lg:text-end">Schiefelbein</span>
-          </Link>
-        </h2>
-        <div className="">
-          <nav
-            className={`flex flex-col gap-6 justify-center
-            bg-myBlack/95 text-myWhite md:text-myBlack md:bg-transparent absolute md:static top-12 right-5 z-10 rounded-xl 
-            md:rounded-none ${yeseva.className}`}
-          >
-            <div className="flex justify-end md:hidden">
-              <button
-                className=" p-2 text-myWhite rounded-md outline-none focus:border-gray-400 focus:border"
-                onClick={() => setNavbar(!navbar)}
-              >
-                {navbar ? (
-                  <Close />
-                ) : (
-                  <div>
-                    <Menu />
-                  </div>
-                )}
-              </button>
+      <nav className="pt-[60px] pb-[40px]">
+        <div className="flex flex-col sm:flex-row justify-between items-center">
+          <div>
+            <h2 className={` ${cinzelDecorative.className}`}>
+              <Link href="/" className="flex flex-col">
+                <span className="text-4xl">Landressa</span>
+                <span className="text-2xl lg:text-end">Schiefelbein</span>
+              </Link>
+            </h2>
+          </div>
+          <div className="hidden sm:flex">
+            <div className="hidden sm:flex">
+              {navigationLinks.map((link, index) => (
+                <Link
+                  href={link.path[0]}
+                  key={index}
+                  className="hover:text-myBlueHover"
+                >
+                  {link.label}
+                </Link>
+              ))}
             </div>
-            <div
-              className={` ${
-                navbar ? "py-20 px-20 md:py-5 block lg:p-0" : "hidden"
-              }`}
+          </div>
+          <div className="hidden sm:flex gap-3 items-center md:justify-center">
+            <Link
+              href="https://whatsa.me/5555997073688/?t=Ol%C3%A1,%20gostaria%20de%20realizar%20um%20or%C3%A7amento."
+              target="_blank"
             >
-              <div className="flex flex-col md:flex-row gap-6 justify-center">
-                {navigationLinks.map((link, index) => (
-                  <Link
-                    href={link.path[0]}
-                    key={index}
-                    className="hover:text-myBlueHover"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
+              <Whatsapp className="hover:text-myBlueHover" />
+            </Link>
+            <Link
+              href="https://www.instagram.com/landressasch/"
+              target="_blank"
+            >
+              <Instagram className="hover:text-myBlueHover" />
+            </Link>
+            <Link
+              href="http://lattes.cnpq.br/7252092118340697"
+              target="_blank"
+              className="hover:text-myBlueHover"
+            >
+              Lattes
+            </Link>
+          </div>
+          <div
+            onClick={handleNav}
+            className="absolute top-16 right-10 sm:hidden "
+          >
+            {menuOpen ? <></> : <Menu />}
+          </div>
+        </div>
+        <div
+          className={
+            menuOpen
+              ? "fixed left-0 top-0 w-[70%] sm:hidden h-screen bg-myBlack/90 p-10 ease-in duration-300"
+              : "fixed left-[-100%] top-0 p-10 !ease-in-out duration-1000"
+          }
+        >
+          <div onClick={handleNav} className="pt-6 sm:hidden text-myWhite">
+            {menuOpen ? (
+              <Close className="absolute top-16 right-10 sm:hidden " />
+            ) : (
+              <></>
+            )}
+            <div className="flex flex-col my-3">
+              {navigationLinks.map((link, index) => (
+                <Link
+                  href={link.path[0]}
+                  key={index}
+                  className="py-2 border-b-2 text-center"
+                >
+                  {link.label}
+                </Link>
+              ))}
             </div>
-          </nav>
+            <div className="flex justify-evenly mt-10">
+              <Link
+                href="https://whatsa.me/5555997073688/?t=Ol%C3%A1,%20gostaria%20de%20realizar%20um%20or%C3%A7amento."
+                target="_blank"
+              >
+                <Whatsapp className="hover:text-myBlueHover" />
+              </Link>
+              <Link
+                href="https://www.instagram.com/landressasch/"
+                target="_blank"
+              >
+                <Instagram className="hover:text-myBlueHover" />
+              </Link>
+              <Link
+                href="http://lattes.cnpq.br/7252092118340697"
+                target="_blank"
+                className="hover:text-myBlueHover"
+              >
+                Lattes
+              </Link>
+            </div>
+          </div>
         </div>
-
-        <div className="flex gap-3 items-center md:justify-center">
-          <Link
-            href="https://whatsa.me/5555997073688/?t=Ol%C3%A1,%20gostaria%20de%20realizar%20um%20or%C3%A7amento."
-            target="_blank"
-          >
-            <Whatsapp className="hover:text-myBlueHover" />
-          </Link>
-          <Link href="https://www.instagram.com/landressasch/" target="_blank">
-            <Instagram className="hover:text-myBlueHover" />
-          </Link>
-          <Link
-            href="http://lattes.cnpq.br/7252092118340697"
-            target="_blank"
-            className="hover:text-myBlueHover"
-          >
-            Lattes
-          </Link>
-        </div>
-      </div>
+      </nav>
     </Container>
   );
 };
