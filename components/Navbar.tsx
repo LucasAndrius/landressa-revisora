@@ -25,7 +25,7 @@ export const Navbar = () => {
   return (
     <Container>
       <nav className="pt-[60px] pb-[40px]">
-        <div className="flex flex-col sm:flex-row justify-between items-center">
+        <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row justify-between items-left md:items-center">
           <div>
             <h2 className={` ${cinzelDecorative.className}`}>
               <Link href="/" className="flex flex-col">
@@ -34,8 +34,8 @@ export const Navbar = () => {
               </Link>
             </h2>
           </div>
-          <div className="hidden sm:flex">
-            <div className="hidden sm:flex">
+          <div className="hidden sm:flex ">
+            <div className="hidden sm:flex md:gap-6 my-5">
               {navigationLinks.map((link, index) => (
                 <Link
                   href={link.path[0]}
