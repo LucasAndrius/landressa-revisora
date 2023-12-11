@@ -75,7 +75,7 @@ export default async function Portfolio() {
             */}
             <div className="flex gap-6 flex-wrap justify-center md:justify-start">
               {projects.map((project) => (
-                <div key={project._id}>
+                <div>
                   {project.image && (
                     <Link href={project.url} target="_blank">
                       <Image
