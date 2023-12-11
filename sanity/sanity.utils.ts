@@ -38,7 +38,6 @@ export async function getProject(slug: string): Promise<Portfolio> {
 export async function getProjectLatests(): Promise<Portfolio[]> {
   return createClient(clientConfig).fetch(
     groq`*[_type == "portfolio"] [0..5]{
-      _id,
       _createdAt,
       name,
       description,

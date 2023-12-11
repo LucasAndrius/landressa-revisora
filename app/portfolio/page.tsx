@@ -63,7 +63,7 @@ export default async function Portfolio() {
               <h2
                 className={`font-semibold text-3xl lg:pt-0 mb-4 py-5 ${yeseva.className}`}
               >
-                5 últimos livros revisados
+                Últimos livros revisados
               </h2>
             </div>
             {/**
