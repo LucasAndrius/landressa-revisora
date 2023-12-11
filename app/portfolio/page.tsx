@@ -66,11 +66,13 @@ export default async function Portfolio() {
                 5 últimos livros revisados
               </h2>
             </div>
+            {/**
             <div>
               <button onClick={handlePrevButton}>página anterior</button>
               <div>{page}</div>
               <button onClick={handleNextButton}>proxima página</button>
-            </div>
+            </div> 
+            */}
             <div className="flex gap-6 flex-wrap justify-center md:justify-start">
               {projects.map((project) => (
                 <div key={project._id}>
