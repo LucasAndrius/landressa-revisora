@@ -2,7 +2,6 @@ import { ButtonLink } from "./ButtonLink";
 import Container from "./Container";
 import { BookUndraw } from "./svg";
 import { Yeseva_One } from "next/font/google";
-import undraw from ".././public/book_undraw.svg";
 
 const yeseva = Yeseva_One({
   subsets: ["latin"],

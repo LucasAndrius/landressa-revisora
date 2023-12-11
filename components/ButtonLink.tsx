@@ -14,7 +14,7 @@ type Props = {
 export const ButtonLink = (props: Props) => {
   return (
     <Link href={props.link} className={yeseva.className}>
-      <div className="hover:animate-pulse px-4 py-4 my-4 text-center font-semibold rounded-lg bg-myBlue">
+      <div className="hover:animate-pulse px-4 py-4 my-4 text-center font-semibold rounded-lg bg-myBlue max-w-[280px]">
         {props.label}
       </div>
     </Link>

@@ -7,6 +7,12 @@ const nextConfig = {
       use: [{loader: '@svgr/webpack', options: { icon: true}}]
     })
     return config;
+  },
+  images:{
+    domains: ["cdn.sanity.io",],
+    dangerouslyAllowSVG: true,
+    contentDispositionType: 'attachment',
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   }
 }
 
