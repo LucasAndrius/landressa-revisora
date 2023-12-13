@@ -1,6 +1,6 @@
 const config = {
   projectId: "y2qoak2g",
-  dataset: process.env.SANITY_DATASET,
+  dataset: "production",
   apiVersion: "2023-11-11",
   useCdn: false,
 };
