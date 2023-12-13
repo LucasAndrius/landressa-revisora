@@ -1,7 +1,7 @@
 const config = {
   projectId: process.env.SANITY_PROJECTID,
   dataset: process.env.SANITY_DATASET,
-  apiVersion: process.env.SANITY_API_VERSION,
+  apiVersion: "2023-11-11",
   useCdn: false,
 };
 
