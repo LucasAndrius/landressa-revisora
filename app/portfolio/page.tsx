@@ -1,4 +1,3 @@
-"use client";
 import { ButtonLink } from "@/components/ButtonLink";
 import Container from "@/components/Container";
 import { Footer } from "@/components/Footer";
@@ -15,17 +14,7 @@ const yeseva = Yeseva_One({
 });
 
 export default async function Portfolio() {
-  const limit = 6;
-  const [page, setPage] = useState(0);
-
   const projects = await getProjectLatests();
-
-  const handlePrevButton = () => {
-    setPage(page === 0 ? 0 : page - 1);
-  };
-  const handleNextButton = () => {
-    setPage(page + 1);
-  };
 
   return (
     <div>
@@ -66,13 +55,6 @@ export default async function Portfolio() {
                 Últimos livros revisados
               </h2>
             </div>
-            {/**
-            <div>
-              <button onClick={handlePrevButton}>página anterior</button>
-              <div>{page}</div>
-              <button onClick={handleNextButton}>proxima página</button>
-            </div> 
-            */}
             <div className="flex gap-6 flex-wrap justify-center md:justify-start">
               {projects.map((project) => (
                 <div key={project._id}>
