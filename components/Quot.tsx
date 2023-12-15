@@ -37,7 +37,10 @@ export const Quot = () => {
                   Nota de rodapé Referências Apêndice e anexo
                 </li>
               </ul>
-              <ButtonLink link="" label="quero este" />
+              <ButtonLink
+                link="https://wa.me/5555997073688?text=Ol%C3%A1%2C+tudo+bem+Landressa%2C+gostaria+de+saber+mais+sobre+o+plano%3A+Plano+1+Formata+pra+mim."
+                label="quero este"
+              />
             </div>
           </div>
           <div className="lg:w-1/2 flex justify-center md:w-full">
@@ -61,7 +64,10 @@ export const Quot = () => {
               <p className={yeseva.className}>
                 <span className="font-bold">+</span> Plano 1 Formata pra mim
               </p>
-              <ButtonLink link="" label="quero este" />
+              <ButtonLink
+                link="https://wa.me/5555997073688?text=Ol%C3%A1%2C+tudo+bem+Landressa%2C+gostaria+de+saber+mais+sobre+o+plano%3A+Plano+2+Revis%C3%A3o+%2B+Formata+pra+mim."
+                label="quero este"
+              />
             </div>
           </div>
         </div>
