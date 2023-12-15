@@ -1,6 +1,7 @@
 import { Portfolio } from "@/types/Portfolio";
 import { createClient, groq } from "next-sanity";
 import clientConfig from "./config/client.config";
+import { myLinks } from "@/types/MyLinks";
 
 export async function getProjects(): Promise<Portfolio[]> {
   return createClient(clientConfig).fetch(
@@ -46,6 +47,20 @@ export async function getProjectLatests(): Promise<Portfolio[]> {
       "image": image.asset->url,
       url,
       content
+    }`,
+    { next: { revalidate: 600 } }
+  );
+}
+
+export async function getMyLinks(): Promise<myLinks[]> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "myLinks"] | order(_createdAt) {
+      _id,
+      _createdAt,
+      name,
+      "image": image.asset->url,
+      "alt": image.alt[0]->alt,
+      url,
     }`,
     { next: { revalidate: 600 } }
   );
