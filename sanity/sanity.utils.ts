@@ -38,7 +38,7 @@ export async function getProject(slug: string): Promise<Portfolio> {
 
 export async function getProjectLatests(): Promise<Portfolio[]> {
   return createClient(clientConfig).fetch(
-    groq`*[_type == "portfolio"] [0..5]{
+    groq`*[_type == "portfolio"] [0..5] | order(_createdAt desc){
       _id,
       _createdAt,
       name,
@@ -61,6 +61,23 @@ export async function getMyLinks(): Promise<myLinks[]> {
       "image": image.asset->url,
       "alt": image.alt[0]->alt,
       url,
+    }`,
+    { next: { revalidate: 600 } }
+  );
+}
+
+export async function getBlogPosts(): Promise<Portfolio[]> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "posts"] | order(_createdAt desc) {
+      _id,
+      _createdAt,
+      name,
+      description,
+      "slug": slug.current,
+      "image": image.asset->url,
+      "alt": image.alt[0]->alt,
+      url,
+      content
     }`,
     { next: { revalidate: 600 } }
   );

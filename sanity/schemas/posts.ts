@@ -48,7 +48,42 @@ export default defineType({
       name: "content",
       title: "Content",
       type: "array",
-      of: [{ type: "block" }],
+      of: [
+        {
+          type: "block",
+          marks: {
+            annotations: [
+              {
+                name: "link",
+                type: "object",
+                title: "URL",
+                fields: [
+                  {
+                    title: "URL",
+                    name: "href",
+                    type: "url",
+                  },
+                  {
+                    title: "New window",
+                    name: "blank",
+                    type: "boolean",
+                  },
+                ],
+              },
+            ],
+          },
+        },
+        {
+          type: "image",
+          fields: [
+            {
+              title: "Alt text",
+              name: "alt",
+              type: "string",
+            },
+          ],
+        },
+      ],
     }),
   ],
 

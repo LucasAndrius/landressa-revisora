@@ -76,9 +76,10 @@ export default async function Portfolio() {
             <div>
               <H2 name="Demais livros" />
             </div>
-            <div className="!max-h-[375px] max-w-[250px] overflow-x-hidden overflow-y-auto">
+            <div className="!max-h-[375px] max-w-[250px] overflow-x-hidden overflow-y-auto pr-10 ">
               {lastReviewedName.map((book) => (
                 <ul key={book._id}>
+                  <hr className="border-myBlueHover" />
                   <li className="py-1 text-sm">{book.name}</li>
                 </ul>
               ))}
