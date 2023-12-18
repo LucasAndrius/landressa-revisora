@@ -64,7 +64,7 @@ export default async function Portfolio() {
                         height={1241}
                         className="h-44 w-44"
                         quality={100}
-                        objectFit="cover"
+                        style={{ objectFit: "cover" }}
                       />
                     </Link>
                   )}

@@ -74,11 +74,29 @@ export async function getBlogPosts(): Promise<Portfolio[]> {
       name,
       description,
       "slug": slug.current,
-      "image": image.asset->url,
+      "cover": image.asset->url,
       "alt": image.alt[0]->alt,
       url,
-      content
+      content,
+      categories[],
     }`,
     { next: { revalidate: 600 } }
+  );
+}
+
+export async function getBlogPost(slug: string): Promise<Portfolio> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "posts" && slug.current == $slug][0]{
+      _id,
+      _createdAt,
+      name,
+      description,
+      "slug": slug.current,
+      "cover": image.asset->url,
+      url,
+      content,
+      categories[],
+    }`,
+    { slug, next: { revalidate: 600 } }
   );
 }

@@ -1,7 +1,6 @@
 import Container from "@/components/Container";
 import { getBlogPosts } from "@/sanity/sanity.utils";
 import { PortableText } from "@portabletext/react";
-import urlBuilder from "@sanity/image-url";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -19,20 +18,25 @@ export default async function Blog() {
               <Image
                 src={post.image}
                 alt={post.name}
-                width={750}
-                height={300}
+                width={200}
+                height={200}
               />
             )}
-            <div>
-              <h4>{post.name}</h4>
-            </div>
-            <div>
+            <Link href={`/blog/${post.slug}`}>
+              <h4>
+                <div>{post.name}</div>
+              </h4>
+
+              <hr />
+              {/*  <pre>{JSON.stringify(post.slug, null, 2)}</pre> 
+            <pre>{JSON.stringify(posts, null, 2)}</pre>*/}
+
               <PortableText value={post.content} />
-            </div>
+            </Link>
+            <hr />
           </div>
         ))}
         <hr />
-        <pre>{JSON.stringify(posts, null, 2)}</pre>
       </div>
     </Container>
   );
