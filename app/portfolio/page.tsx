@@ -80,7 +80,11 @@ export default async function Portfolio() {
               {lastReviewedName.map((book) => (
                 <ul key={book._id}>
                   <hr className="border-myBlueHover" />
-                  <li className="py-1 text-sm">{book.name}</li>
+                  <li className="py-1 text-sm">
+                    <a href={book.url} target="_blank">
+                      {book.name}
+                    </a>
+                  </li>
                 </ul>
               ))}
             </div>
