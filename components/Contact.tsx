@@ -32,7 +32,7 @@ export const Contact = () => {
             <Instagram /> @landressasch
           </div>
           <div className="text-sm flex items-center gap-2 md:text-xl py-2">
-            <span>@</span> contato_landressa@gmail.com
+            <span>@</span> landressas872@gmail.com
           </div>
         </div>
         <div className="flex flex-col items-start">
