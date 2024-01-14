@@ -20,6 +20,17 @@ export async function getProjects(): Promise<Portfolio[]> {
   );
 }
 
+export async function getLastReviewedBookName(): Promise<Portfolio[]> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "portfolio"] | order(_createdAt desc) {
+      _id,
+      name,
+      url,
+    }`,
+    { next: { revalidate: 600 } }
+  );
+}
+
 export async function getProject(slug: string): Promise<Portfolio> {
   return createClient(clientConfig).fetch(
     groq`*[_type == "portfolio" && slug.current == $slug][0]{
@@ -38,7 +49,7 @@ export async function getProject(slug: string): Promise<Portfolio> {
 
 export async function getProjectLatests(): Promise<Portfolio[]> {
   return createClient(clientConfig).fetch(
-    groq`*[_type == "portfolio"] [0..5] | order(_createdAt desc){
+    groq`*[_type == "portfolio"] | order(_createdAt desc) [0..5] {
       _id,
       _createdAt,
       name,
@@ -58,6 +69,21 @@ export async function getMyLinks(): Promise<myLinks[]> {
       _id,
       _createdAt,
       name,
+      "image": image.asset->url,
+      "alt": image.alt[0]->alt,
+      url,
+    }`,
+    { next: { revalidate: 600 } }
+  );
+}
+
+export async function getPublished(): Promise<Portfolio[]> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "published"] | order(_createdAt desc) [0..8] {
+      _id,
+      _createdAt,
+      name,
+      "slug": slug.current,
       "image": image.asset->url,
       "alt": image.alt[0]->alt,
       url,

@@ -1,0 +1,24 @@
+{
+  "folder-color.pathColors": [
+    {
+      "folderPath": "landressa-revisora\\app\\",
+      "color": "foldercolorizer.green"
+    },
+    {
+      "folderPath": "landressa-revisora\\components\\",
+      "color": "foldercolorizer.yellow"
+    },
+    {
+      "folderPath": "landressa-revisora\\sanity\\",
+      "color": "foldercolorizer.orange"
+    },
+    {
+      "folderPath": "landressa-revisora\\types\\",
+      "color": "foldercolorizer.blue"
+    },
+    {
+      "folderPath": "landressa-revisora\\.vscode\\",
+      "color": "foldercolorizer.green"
+    }
+  ]
+}
